@@ -1,0 +1,334 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	&:focus {
+		outline: 0;
+	}
+}
+.container1 {
+	background: url(../images/stars.jpg) no-repeat;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	padding: 20px;
+}
+.container{
+	
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 10px;
+}	
+.section {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+			.title {
+				width: 50%;
+				display :inline-block;
+				text-align: center; 
+				font-family: fantasy;
+    			font-size: 60px;
+				padding-top: 10px;	
+				color: #7efcf1;
+				position: relative;
+		    	left: -250px;
+
+			}
+			.text  {
+				width: 50%;
+				display :inline-block;
+				text-align: center;
+				font-family: monospace;
+				font-size: 25px;
+				padding-top: 10px;
+				color: #FFF;
+				position: relative;
+		    	right: -250px;
+		    }
+		    .number {
+		    	top: 300px;
+    			left: 800px;
+				color: #fff;
+				font-size: 89px;
+				font-family: fantasy;
+				
+		    }.picture{
+		    	top:500px;
+		    	position: 	relative;
+		    	/*background-color: #FFF;*/
+		    	&::before {
+		    		content: '';
+		    		background-color: #fff;
+		    		position: absolute;
+		    		width: 0;
+		    		height:100%;
+		    		z-index: 0;
+		    		transition: width 0.5s linear 1s;
+		    	}
+		    }
+}	
+
+body {
+	margin: 0px;
+}
+.parallax img {
+    left: 50%;
+    top: 50px;
+}
+ul {
+	li {
+		img{
+			position: fixed !important;
+		}
+		/*&.js img {
+			left: -100px !important;
+   			top: 132px !important;
+			
+		}
+		&.drupal {
+			left: 300px !important;
+   			top: 250px !important;
+		}
+		&.wordpress {
+			right: 200px !important;
+   			top: 250px !important;
+		}*/
+	}
+}
+#fp-nav {
+
+	position: fixed;
+    z-index: 0;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+	
+	.right{
+		right: 20px;
+	}
+
+	ul {
+	    display: block;
+
+		li {
+		    display: block;
+		    width: 14px;
+		    height: 13px;
+		    margin: 7px;
+		    position: relative;
+		   			a {
+				display: block;
+			    position: relative;
+			    z-index: 1;
+			    width: 100%;
+			    height: 100%;
+			    cursor: pointer;
+			    text-decoration: none;
+			    
+
+
+				span {
+					position: absolute;
+					z-index: 1;
+					height: 4px;
+					width: 20px;
+					border: 0;
+					background: #ff4d5a;
+					left: 50%;
+					top: 50%;
+					margin: -2px 0 0 -2px;
+					-webkit-transition: all 0.1s ease-in-out;
+					-moz-transition: all 0.1s ease-in-out;
+					-o-transition: all 0.1s ease-in-out;
+					transition: all 0.1s ease-in-out;
+
+				}
+				&.active {
+					span {
+						width: 60px;
+						background : #f7f2ea;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.active {
+	.title{
+		left: -560px;
+		transition: 3s all;
+		-webkit-transform: translateX(550px);
+    	-o-transform: translateX(550px); 
+    	-moz-transform: translateX(550px);
+    	transform: translateX(550px);
+	}
+	
+	.text{
+		left: -560px;
+		transition: 3s all;
+		-webkit-transform: translateX(550px);
+    	-o-transform: translateX(550px); 
+    	-moz-transform: translateX(550px);
+    	transform: translateX(550px);
+    	padding: 20px;
+    	text-decoration: none;
+    		ul {
+			  list-style-type: none;
+			}
+	}
+	.picture {
+		width: 213px;		
+		z-index: 1;
+		top: -280px;
+    	left: 600px;
+    	position: relative;
+    	&:before {
+    		width: 100%;
+    	}
+    	img {
+    		position: relative;
+    	}
+	}
+	.number{
+		position: absolute;
+		top: 650px;
+		left: 800px;
+		transition: 3s all;
+		-webkit-transform: translateY(-120px);
+    	-o-transform: translateY(-120px); 
+    	-moz-transform: translateY(-120px);
+    	transform: translateY(-120px);
+	}
+}
+.menu-icon{
+
+	padding: 20px;
+	display: inline-block;
+    cursor: pointer;
+    position: relative;
+	z-index: 3;
+		.bar1, .bar2, .bar3 {
+		    width: 35px;
+		    height: 5px;
+		    background-color: #FFF;
+		    margin: 6px 0;
+		    transition: 0.4s;
+
+		}
+		&.change .bar1 {
+
+			color:blue;
+		    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		    transform: rotate(-45deg) translate(-9px, 6px);
+		}
+
+		&.change .bar2 {opacity: 0;}
+
+		&.change .bar3 {
+		    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+		    transform: rotate(45deg) translate(-8px, -8px);
+		}
+}
+.hide{
+	display: none;
+}
+.slide{
+	width: 100%;
+	height:100vh;
+	position: relative;
+	z-index: 1;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgba(43, 0, 128, 0.8), rgba(158, 77, 255, 0.6784313725490196));
+    ul{
+		position: relative;
+    	top: 70px;
+		li{
+			text-align: center;
+			color:#fff;
+			padding: 10px;
+			cursor: pointer;
+    		letter-spacing: 0.1em;
+    		text-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);	
+  			a {
+				display: inline-block;
+				color: #fff;
+				font-size: 6rem;
+				font-family: "futura_m";
+				font-weight: normal;
+				text-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
+				-webkit-transform: translate3d(0, 100%, 0);
+				transform: translate3d(0, 100%, 0);
+				-webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+				-o-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+				transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+				text-decoration: none;
+	    		&:after {
+					content: "";
+					width: 0;
+					height: 10px;
+					background: #fff;
+					position: absolute;
+					left: 0;
+					top: 40%;
+					-webkit-box-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
+					box-shadow: 0 10px 30px rgba(2, 11, 22, 0.2);
+					-webkit-transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+					-o-transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+					transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+	    		 
+	    		}
+	    		&:hover{
+				   	&:after {
+				   		width:	100%;
+				   	}
+	  			}
+    		}
+
+
+		}
+	}
+
+}
+.slidedown {
+		position: relative;
+		z-index: 1;
+		display: block;
+		transition: 3s all;
+		top: -85px;
+}
+.slideUp {
+	position: relative;
+	z-index: -5;
+	display: none;
+}
+.display{
+	display: block;
+
+}
+ @-webkit-keyframes fadeIn {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+}
+@keyframes fadeIn {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+}
+         
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+     animation-name: fadeIn;
+}
+/*.fullpage-wrap {
+	padding: 10px;
+
+}*/
+
+.picture {
+
+}
